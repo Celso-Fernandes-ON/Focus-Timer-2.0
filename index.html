@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="temporizador estilo pomodoro 2.0">
+        <title>FocusTimer</title>
+        <link rel="icon" href="./assets/favicon.svg">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script type="module" src="./src/main.js" defer></script>
+    </head>
+    <body>
+        <main id="controls">
+            <div id="chronor">
+                <div id="timer">
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </div>
+                <div id="timer-controller" class="controls">
+                    <button data-action="toggleRunning" class="ph ph-play-circle">
+                        <span class="sr-only">Play</span>
+                    </button>
+                    <button data-action="toggleRunning" class="ph ph-pause-circle">
+                        <span class="sr-only">Pause</span>
+                    </button>
+                    <button data-action="set" class="ph ph-timer">
+                        <span class="sr-only">Timer</span>
+                    </button>
+                    <button data-action="reset" class="ph ph-stop-circle">
+                        <span class="sr-only">Stop</span>
+                    </button>
+                    <button data-action="plus" class="ph ph-plus-circle">
+                        <span class="sr-only">Plus</span>
+                    </button>
+                    <button data-action="minus" class="ph ph-minus-circle">
+                        <span class="sr-only">less</span>
+                    </button>
+                </div>
+            </div>
+            <div id="background-sounds" class="controls">
+                <button id="forest" class="ph ph-tree-evergreen" data-action="forest">
+                    <span class="sr-only">Forest</span>
+                </button>
+                <button id="rain" class="ph ph-cloud-rain" data-action="rain">
+                    <span class="sr-only">Rain</span>
+                </button>
+                <button id="coffeeShop" class="ph ph-storefront" data-action="coffeeShop">
+                    <span class="sr-only">Coffee Shop</span>
+                </button>
+                <button id="firePlace" class="ph ph-campfire" data-action="firePlace">
+                    <span  class="sr-only">Fire Place</span>
+                </button>
+            </div>
+        </main>
+    </body>
+</html>
