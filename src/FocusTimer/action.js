@@ -22,10 +22,20 @@ export function set(){
 }
 export function plus(){
     state.minutes += 5
+    if(state.minutes > 60){
+        state.minutes = 60
+        timer.updateDisplay()
+        return
+    }
     timer.updateDisplay()
 }
 export function minus(){
     state.minutes -= 5
+    if(state.minutes < 0){
+        state.minutes = 0
+        timer.updateDisplay()
+        return
+    }
     timer.updateDisplay()
 }
 
